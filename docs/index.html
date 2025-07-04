@@ -3,173 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rRateLimit - Goレート制限ライブラリ</title>
+    <title>Game Portal - あなたの冒険が始まる場所</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="nav-brand">
-                    <h1>rRateLimit</h1>
-                    <span class="version">v1.0.0</span>
-                </div>
-                <div class="nav-links">
-                    <a href="#features">特徴</a>
-                    <a href="#usage">使い方</a>
-                    <a href="#demo">デモ</a>
-                    <a href="https://github.com/rRateLimit/rRateLimit" target="_blank" class="github-link">
-                        <svg viewBox="0 0 16 16" width="20" height="20">
-                            <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                    <button class="theme-toggle" id="theme-toggle">🌙</button>
-                </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">KOSE GAMES</span>
             </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h2>シンプルで効率的なGoレート制限ライブラリ</h2>
-                <p>rRateLimitは、APIやサービスのリクエストレートを制御するための軽量なGoライブラリです。</p>
-                <div class="hero-buttons">
-                    <a href="#usage" class="btn btn-primary">使い方を見る</a>
-                    <a href="#demo" class="btn btn-secondary">デモを試す</a>
-                </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">ホーム</a></li>
+                <li><a href="#games" class="nav-link">ゲーム</a></li>
+                <li><a href="#categories" class="nav-link">カテゴリー</a></li>
+                <li><a href="https://suzuri.jp/kosegames" target="_blank" class="nav-link">公式グッズサイト</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="ゲームを検索...">
+                <button class="search-btn">🔍</button>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <section id="features" class="features">
-            <div class="container">
-                <h2>主な特徴</h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">⚡</div>
-                        <h3>高速</h3>
-                        <p>最小限のオーバーヘッドで高速なレート制限を実現</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🎯</div>
-                        <h3>シンプル</h3>
-                        <p>直感的なAPIで簡単に統合可能</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🔧</div>
-                        <h3>柔軟</h3>
-                        <p>カスタマイズ可能な制限とインターバル設定</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🚀</div>
-                        <h3>軽量</h3>
-                        <p>外部依存なしの軽量実装</p>
-                    </div>
-                </div>
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-particles"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">次世代のゲーム体験へ</h1>
+            <p class="hero-subtitle">最高のゲームコレクションがあなたを待っている</p>
+            <button class="cta-button">今すぐプレイ</button>
+        </div>
+        <div class="hero-featured">
+            <div class="featured-game">
+                <div class="featured-img"></div>
+                <h3>サイバーパンク・オデッセイ</h3>
+                <p>未来都市で繰り広げられる壮大な冒険</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="usage" class="usage">
-            <div class="container">
-                <h2>使い方</h2>
-                
-                <div class="usage-section">
-                    <h3>インストール</h3>
-                    <pre><code class="language-bash">go get github.com/rRateLimit/rRateLimit</code></pre>
-                </div>
-
-                <div class="usage-section">
-                    <h3>基本的な使用例</h3>
-                    <pre><code class="language-go">package main
-
-import (
-    "fmt"
-    "time"
-    "github.com/rRateLimit/rRateLimit"
-)
-
-func main() {
-    // 1秒間に3リクエストまで許可
-    rl := rRateLimit.NewRateLimit(3, time.Second)
-    
-    for i := 0; i < 10; i++ {
-        if rl.AllowRequest() {
-            fmt.Printf("Request %d allowed\n", i+1)
-        } else {
-            fmt.Printf("Request %d denied\n", i+1)
-        }
-        time.Sleep(200 * time.Millisecond)
-    }
-}</code></pre>
-                </div>
-
-                <div class="usage-section">
-                    <h3>API リファレンス</h3>
-                    <div class="api-method">
-                        <h4>NewRateLimit(limit int, interval time.Duration)</h4>
-                        <p>新しいレート制限インスタンスを作成します。</p>
-                        <ul>
-                            <li><code>limit</code>: 指定期間内に許可されるリクエスト数</li>
-                            <li><code>interval</code>: リクエスト制限がリセットされる期間</li>
-                        </ul>
-                    </div>
-                    <div class="api-method">
-                        <h4>AllowRequest() bool</h4>
-                        <p>リクエストが許可されるかどうかを確認します。許可される場合はtrueを返し、トークンを1つ消費します。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="demo" class="demo">
-            <div class="container">
-                <h2>インタラクティブデモ</h2>
-                <div class="demo-container">
-                    <div class="demo-controls">
-                        <div class="control-group">
-                            <label for="limit">制限数:</label>
-                            <input type="number" id="limit" value="3" min="1" max="10">
-                        </div>
-                        <div class="control-group">
-                            <label for="interval">インターバル (秒):</label>
-                            <input type="number" id="interval" value="1" min="1" max="10">
-                        </div>
-                        <button id="start-demo" class="btn btn-primary">デモを開始</button>
-                        <button id="stop-demo" class="btn btn-secondary" disabled>停止</button>
-                    </div>
-                    <div class="demo-visualization">
-                        <div class="token-display">
-                            <h4>残りトークン</h4>
-                            <div class="token-count" id="token-count">3</div>
-                            <div class="token-bar">
-                                <div class="token-fill" id="token-fill"></div>
-                            </div>
-                        </div>
-                        <div class="request-log">
-                            <h4>リクエストログ</h4>
-                            <div id="request-log" class="log-container"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
+    <section class="categories" id="categories">
         <div class="container">
-            <p>&copy; 2024 rRateLimit. MIT License.</p>
-            <p>Created with ❤️ by the rRateLimit team</p>
+            <h2 class="section-title">カテゴリー</h2>
+            <div class="category-filter">
+                <button class="filter-btn active" data-category="all">すべて</button>
+                <button class="filter-btn" data-category="action">アクション</button>
+                <button class="filter-btn" data-category="rpg">RPG</button>
+                <button class="filter-btn" data-category="puzzle">パズル</button>
+                <button class="filter-btn" data-category="strategy">ストラテジー</button>
+                <button class="filter-btn" data-category="renai">恋愛</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="games" id="games">
+        <div class="container">
+            <h2 class="section-title">ゲームライブラリ</h2>
+            <div class="games-grid">
+                <!-- ゲームカードはJavaScriptで動的に生成されます -->
+                <div class="loading-message" style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
+                    <p style="color: var(--text-gray);">ゲームを読み込み中...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>KOSE GAMES</h4>
+                    <p>最高のゲーム体験をお届けします</p>
+                </div>
+                <div class="footer-section">
+                    <h4>リンク</h4>
+                    <ul>
+                        <li><a href="#">利用規約</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>フォローする</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Game Portal. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-go.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="games-data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
